@@ -1,0 +1,1592 @@
+{
+	"INVALID_ACCESS_TOKEN": "Invalid access token!",
+	"SERVER_ERROR_MESSAGE": "Internal Server Error.",
+	"SERVICE_UNAVAILABLE": "Service is unavailable. Please try after some time!",
+	"JWT_DECODE_ERROR": "Error during JWT decode.",
+	"ACCESS_FORBIDDEN": "Access forbidden!",
+	"INVALID_TIME": "Invalid time format",
+	"VALIDATIONS": {
+		"required": "%s is required",
+		"mustDate": "%s must be date",
+		"mustString": "%s must be string",
+		"mustObject": "%s must be object",
+		"mustNumber": "%s must be number",
+		"invalid": "%s is not valid",
+		"invalidFormat": "%s format should be in %s",
+		"mustArray": "%s must be array",
+		"mustBoolean": "%s must be boolean value",
+		"invalidUUID": "%s must be valid UUID",
+		"containDuplicate": "%s contain duplicate value",
+		"nonZero": "%s must be non zero value",
+		"invalidJSON": "%s is not valid JSON",
+		"search": {
+			"valid_json": "Please enter valid JSON"
+		}
+	},
+	"TEST": {
+		"SUCCESS": "Test proceed successfully"
+	},
+	"ADD_POST": {
+		"SUCCESS": "Post added successfully.",
+		"VALIDATIONS": {
+			"type": {
+				"required": "type is required",
+				"mustNumber": "type must be number"
+			},
+			"categoryId": {
+				"required": "categoryId is required",
+				"mustString": "categoryId must be string"
+			},
+			"images": {
+				"mustArray": "images must be array"
+			},
+			"videos": {
+				"mustArray": "videos must be array"
+			}
+		}
+	},
+	"UPDATE_POST": {
+		"SUCCESS": "Post updated successfully.",
+		"VALIDATIONS": {
+			"type": {
+				"required": "type is required",
+				"mustNumber": "type must be number"
+			},
+			"categoryId": {
+				"required": "categoryId is required",
+				"mustString": "categoryId must be string"
+			},
+			"postId": {
+				"required": "postId is required",
+				"mustString": "postId must be string"
+			},
+			"images": {
+				"mustArray": "images must be array"
+			},
+			"videos": {
+				"mustArray": "videos must be array"
+			}
+		}
+	},
+	"DELETE_POST": {
+		"SUCCESS": "Post deleted successfully.",
+		"NOT_FOUND": "Post not found.",
+		"VALIDATIONS": {
+			"postId": {
+				"required": "postId is required",
+				"mustString": "postId must be string"
+			}
+		}
+	},
+	"GET_POST_LIST": {
+		"SUCCESS": "Posts retrieved.",
+		"VALIDATIONS": {
+			"limit": {
+				"mustNumber": "limit must be number"
+			},
+			"offset": {
+				"mustNumber": "offset must be number"
+			},
+			"category": {
+				"mustArray": "category must be array"
+			},
+			"userId": {
+				"required": "userId is required.",
+				"mustString": "userId must be string"
+			},
+			"societyId": {
+				"required": "societyId is required.",
+				"mustString": "societyId must be string"
+			}
+		}
+	},
+	"CATEGORY": {
+		"ADD": {
+			"SUCCESS": "Category added successfully.",
+			"VALIDATIONS": {
+				"name": {
+					"required": "name is required",
+					"mustString": "name must be string"
+				},
+				"cover": {
+					"required": "cover is required",
+					"mustString": "cover must be string"
+				},
+				"sortOrder": {
+					"mustNumber": "sortOrder must be number"
+				}
+			}
+		},
+		"GET_ALL": {
+			"SUCCESS": "Categories retrieved.",
+			"VALIDATIONS": {
+				"cityName": {
+					"required": "cityNameis required."
+				}
+			}
+		}
+	},
+	"USER": {
+		"NOT_EXIST": "user detail not exist",
+		"ADD": {
+			"SUCCESS": "User added successfully.",
+			"VALIDATIONS": {
+				"name": {
+					"required": "name is required",
+					"mustString": "name must be string"
+				},
+				"cover": {
+					"required": "cover is required",
+					"mustString": "cover must be string"
+				}
+			},
+			"CHANGE_CURRENT_ADDRESS": {
+				"SUCCESS": "Address changed successfully",
+				"VALIDATIONS": {
+					"city": {
+						"required": "City is required"
+					},
+					"fcmToken": {
+						"required": "fcmToken is required"
+					}
+				}
+			}
+		},
+		"GET": {
+			"VALIDATIONS": {
+				"userId": {
+					"required": "userId is required",
+					"mustString": "userId must be string"
+				}
+			}
+		},
+		"GET_ALL": {
+			"SUCCESS": "Users retrieved."
+		},
+		"UPDATE": {
+			"PHONE_ALREADY_EXISTS": "Phone number already exists.",
+			"ADDRESS_NOT_FOUND": "Address not found.",
+			"SUCCESS": "User updated successfully!!",
+			"NOT_FOUND": "User not found."
+		},
+		"DELETE": {
+			"SUCCESS": "User deleted successfully!!",
+			"NOT_FOUND": "User not found."
+		},
+		"GET_LIST": {
+			"SUCCESS": "User List"
+		},
+		"REFERRED_USER": {
+			"GET_LIST": {
+				"SUCCESS": "user list received successfully"
+			}
+		}
+	},
+	"VENDOR": {
+		"STORE": {
+			"UPDATE": {
+				"SUCCESS": "store detail updated successfully"
+			}
+		},
+		"ITEM": {
+			"VALIDATIONS": {
+				"tax": {
+					"mustArray": "tax must be array",
+					"mustArrayOfObject": "tax must be array of object",
+					"name": {
+						"required": "tax name is required",
+						"mustString": "tax name must be string"
+					},
+					"value": {
+						"required": "tax value is required"
+					}
+				}
+			},
+			"NOT_EXIST": "Item not exist",
+			"EXIST": "Item already exist",
+			"UPDATE": {
+				"SUCCESS": "Item updated successfully"
+			},
+			"GET_LIST": {
+				"SUCCESS": "Item list received successfully"
+			},
+			"REMOVE": {
+				"SUCCESS": "Item removed successfully"
+			}
+		},
+		"PACKAGE_ORDER": {
+			"NOT_EXIST": "Order not exist",
+			"INVALID_STATUS": "Order status is not valid",
+			"VALIDATIONS": {
+				"INVALID_STATUS": "status is not valid"
+			},
+			"GET_LIST": {
+				"SUCCESS": "Order list received successfully"
+			},
+			"UPDATE_STATUS": {
+				"SUCCESS": "Status updated successfully"
+			},
+			"CANCEL": {
+				"SUCCESS": "Order cancelled successfully"
+			},
+			"DELIVER": {
+				"SUCCESS": "Order delivered successfully"
+			},
+			"UPDATE_AVAILABLE_ITEM": {
+				"VALIDATIONS": {
+					"items": {
+						"required": "items is required",
+						"mustArray": "Items must be array",
+						"arrayOfString": "Items must be array of string"
+					}
+				},
+				"PACKED_STATUS": "Order must be packed before update",
+				"SUCCESS": "Item updated successfully"
+			}
+		}
+	},
+	"USER_STORE": {
+		"EXIST": "store already exist",
+		"NOT_EXIST": "user store doesn't exist",
+		"EXIST_STORE_USER": "store user with provided phone already exist",
+		"EXIST_STORE_WITH_WEB_PAGE": "store with web page code already exist",
+		"APPLIED_ALREADY": "You have already applied for store",
+		"GET": {
+			"SUCCESS": "Store detail received successfully"
+		},
+		"CREATE": {
+			"SUCCESS": "store successfully created"
+		},
+		"UPDATE": {
+			"SUCCESS": "store detail updated successfully"
+		},
+		"ITEM": {
+			"EXIST": "item already exist",
+			"NOT_EXIST": "store item not exist",
+			"ADD": {
+				"SUCCESS": "item added successfully"
+			},
+			"GET": {
+				"SUCCESS": "item list received successfully"
+			},
+			"UPDATE": {
+				"SUCCESS": "item detail updated successfully"
+			},
+			"REMOVE": {
+				"SUCCESS": "item removed successfully"
+			}
+		}
+	},
+	"LIKE": {
+		"VALIDATIONS": {
+			"postId": {
+				"required": "postId is required",
+				"mustString": "postId must be string"
+			},
+			"status": {
+				"required": "status is required",
+				"mustBoolean": "status must be boolean"
+			}
+		},
+		"ADD": {
+			"SUCCESS": "Post liked successfully."
+		},
+		"DELETE": {
+			"SUCCESS": "Post unlike successfully."
+		},
+		"GET_ALL": {
+			"SUCCESS": "Likes retrieved successfully."
+		}
+	},
+	"SHARE": {
+		"VALIDATIONS": {
+			"postId": {
+				"required": "postId is required",
+				"mustString": "postId must be string"
+			}
+		},
+		"ADD": {
+			"SUCCESS": "Post shared successfully."
+		},
+		"GET_ALL": {
+			"SUCCESS": "Shares retrieved successfully."
+		}
+	},
+	"COMMENT": {
+		"VALIDATIONS": {
+			"postId": {
+				"required": "postId is required",
+				"mustString": "postId must be string"
+			},
+			"content": {
+				"required": "content is required",
+				"mustString": "content must be string"
+			}
+		},
+		"ADD": {
+			"SUCCESS": "Comment added successfully."
+		},
+		"GET_ALL": {
+			"SUCCESS": "Comments retrieved successfully."
+		}
+	},
+	"REPLY": {
+		"VALIDATIONS": {
+			"postId": {
+				"required": "postId is required",
+				"mustString": "postId must be string"
+			},
+			"commentId": {
+				"required": "commentId is required",
+				"mustString": "commentId must be string"
+			},
+			"replyToUserId": {
+				"required": "replyToUserId is required",
+				"mustString": "replyToUserId must be string"
+			},
+			"content": {
+				"required": "content is required",
+				"mustString": "content must be string"
+			}
+		},
+		"ADD": {
+			"SUCCESS": "Reply added successfully."
+		},
+		"GET_ALL": {
+			"SUCCESS": "Replies retrieved successfully."
+		}
+	},
+	"POST_SPAM": {
+		"VALIDATIONS": {
+			"postId": {
+				"required": "postId is required",
+				"mustString": "postId must be string"
+			}
+		},
+		"ADD": {
+			"SUCCESS": "Post spammed successfully."
+		}
+	},
+	"TRANSACTION": {
+		"GET_ALL": {
+			"SUCCESS": "Transaction retrieved successfully."
+		},
+		"ADD": {
+			"SUCCESS": "Transaction added successfully.",
+			"VALIDATIONS": {
+				"userid": {
+					"mustnumber": "userid must be number."
+				}
+			}
+		},
+		"GET": {
+			"VALIDATIONS": {
+				"transactionType": {
+					"required": "transactionType is required."
+				},
+				"fromDate": {
+					"required": "fromDateis required."
+				},
+				"toDate": {
+					"required": "toDate is required."
+				},
+				"userId": {
+					"required": "userId is required."
+				}
+			}
+		}
+	},
+	"WALLET": {
+		"GET_ALL": {
+			"SUCCESS": "Wallet retrieved successfully."
+		}
+	},
+	"SUBSCCATEGORY": {
+		"ADD": {
+			"SUCCESS": "Category added successfully."
+		},
+		"GET_ALL": {
+			"SUCCESS": "Category retrieved successfully."
+		}
+	},
+	"SUBSCITEM": {
+		"ADD": {
+			"SUCCESS": "Item added successfully."
+		},
+		"GET_ALL": {
+			"SUCCESS": "Item retrieved successfully."
+		}
+	},
+	"SUBSCORDER": {
+		"ADD": {
+			"VALIDATIONS": {
+				"userid": {
+					"required": "userid is required."
+				},
+				"itemid": {
+					"required": "itemId is required."
+				},
+				"itemQuantity": {
+					"required": "itemQuantity is required",
+					"mustNumber": "itemQuantity must be number."
+				},
+				"subscriptionSchedule": {
+					"required": "subscriptionSchedule is required",
+					"mustNumber": "subscriptionSchedule must be number."
+				},
+				"subscSubscribeId": {
+					"required": "SubscribeId is required"
+				}
+			},
+			"SUCCESS": "Order added successfully."
+		},
+		"GET_ALL": {
+			"SUCCESS": "Order retrieved successfully."
+		},
+		"GET_MY": {
+			"VALIDATIONS": {
+				"userId": {
+					"required": "userId is required"
+				},
+				"todayDate": {
+					"required": "SUBSCORDER.GET_MY.VALIDATIONS.todayDate.required"
+				}
+			}
+		}
+	},
+	"PROMOCODE": {
+		"ADD": {
+			"SUCCESS": "Promo code added successfully."
+		},
+		"GET_ALL": {
+			"SUCCESS": "Promo code retrieved successfully."
+		}
+	},
+	"COUNTRY": {
+		"GET_ALL": {
+			"SUCCESS": "Country retrieved successfully."
+		},
+		"ADD": {
+			"SUCCESS": "Country added successfully."
+		}
+	},
+	"STATE": {
+		"GET_ALL": {
+			"SUCCESS": "State retrieved successfully."
+		},
+		"ADD": {
+			"SUCCESS": "State added successfully."
+		}
+	},
+	"CITY": {
+		"ADD": {
+			"SUCCESS": "City added successfully."
+		},
+		"GET_ALL": {
+			"SUCCESS": "City retrieved successfully."
+		},
+		"GET": {
+			"VALIDATIONS": {
+				"cityName": {
+					"required": "city name is required"
+				}
+			}
+		},
+		"GET_BASIC_SERVICE": {
+			"SUCCESS": "CITY.GET_BASIC_SERVICE.SUCCESS",
+			"VALIDATIONS": {
+				"cityName": {
+					"required": "CITY.GET_BASIC_SERVICE.VALIDATIONS.cityName.required"
+				}
+			}
+		},
+		"NOT_EXIST": "City detail not exist"
+	},
+	"ITEMUNIT": {
+		"NOT_EXIST": "Item unit not exist",
+		"ADD": {
+			"SUCCESS": "Unitd added successfully.",
+			"VALIDATIONS": {
+				"qtyUnitName": {
+					"required": "qtyUnitName is required"
+				}
+			}
+		},
+		"GET_ALL": {
+			"SUCCESS": "Unit retrieved successfully."
+		},
+		"GET_DROPDOWN": {
+			"SUCCESS": "unit retrieved successfully."
+		}
+	},
+	"ITEMCATEGORY": {
+		"NOT_EXIST": "category doesn't exists",
+		"ALREADY_EXIST": "category already exists",
+		"ADD": {
+			"SUCCESS": "Category added successfully."
+		},
+		"GET_ALL": {
+			"SUCCESS": "Category retrieved successfully."
+		},
+		"GET_DROPDOWN": {
+			"SUCCESS": "Category retrieved successfully."
+		}
+	},
+	"ITEM_SUBCATEGORY": {
+		"GET_DROPDOWN": {
+			"SUCCESS": "subcategory retrieved successfully."
+		},
+		"NOT_EXIST": "please select subcategory again"
+	},
+	"ITEMMASTER": {
+		"NOT_EXIST": "Item not exist",
+		"ADD": {
+			"VALIDATIONS": {
+				"itemCatSubId": {
+					"required": "itemCatSubId is required"
+				}
+			},
+			"SUCCESS": "Item added successfully."
+		},
+		"GET_ALL": {
+			"SUCCESS": "Item retrieved successfully."
+		},
+		"GET_DROPDOWN": {
+			"SUCCESS": "Category retrieved successfully."
+		}
+	},
+	"PRODUCTSUBCATEGORY": {
+		"GET": {
+			"VALIDATIONS": {
+				"catId": {
+					"required": "catId is required"
+				}
+			}
+		}
+	},
+	"SUBSITEMMASTER": {
+		"GET_ALL": {
+			"SUCCESS": "Subscription item retrieved successfully."
+		},
+		"SEARCH_ITEM": {
+			"VALIDATIONS": {
+				"cityName": {
+					"required": "SUBSITEMMASTER.SEARCH_ITEM.VALIDATIONS.cityName.required"
+				}
+			}
+		}
+	},
+	"SUBSCRIPTIONSCHEDULE": {
+		"NOT_EXIST": "pickup schedule not exist",
+		"ADD": {
+			"SUCCESS": "Schedule added successfully.",
+			"VALIDATIONS": {
+				"pickScheduleName": {
+					"required": "pickScheduleName is required.",
+					"mustString": "pickScheduleName must be mustString."
+				}
+			}
+		},
+		"GET_ALL": {
+			"SUCCESS": "Schedule retrieved successfully."
+		}
+	},
+	"SUBSCRIBE": {
+		"ADD": {
+			"SUCCESS": "Subscribe added successfully.",
+			"VALIDATIONS": {
+				"deliveryDate": {
+					"required": "deliveryDate is required"
+				},
+				"deliveryDay": {
+					"required": "deliveryDay is required",
+					"mustString": "deliveryDay must be string"
+				}
+			}
+		},
+		"GET_ALL": {
+			"SUCCESS": "Subscribe retrieved successfully."
+		},
+		"DELETE": {
+			"SUCCESS": "Subscribe deleted successfully."
+		}
+	},
+	"SUBSCRIBEACTION": {
+		"ADD": {
+			"VALIDATIONS": {
+				"startDate": {
+					"required": "startDate is required."
+				},
+				"endDate": {
+					"required": "endDate is required."
+				}
+			},
+			"SUCCESS": "Subscribe retrieved successfully."
+		}
+	},
+	"SUBCATEGORY": {
+		"GET_ALL": {
+			"VALIDATIONS": {
+				"cityName": {
+					"required": "cityName is required."
+				},
+				"parentId": {
+					"required": "parentId is required."
+				}
+			}
+		}
+	},
+	"STORECAT": {
+		"ADD": {
+			"VALIDATIONS": {
+				"storeCatDesc": {
+					"required": "storeCatDesc is required."
+				}
+			},
+			"SUCCESS": "Category added successfully."
+		},
+		"GET_ALL": {
+			"VALIDATIONS": {
+				"cityName": {
+					"required": "cityName is required."
+				}
+			},
+			"SUCCESS": "Category retrieved successfully."
+		}
+	},
+	"STORE": {
+		"VALIDATIONS": {
+			"id": {
+				"required": "store id is required"
+			},
+			"categoryId": {
+				"required": "categoryId is required",
+				"invalid": "categoryId is not valid uuid"
+			},
+			"latitude": {
+				"required": "latitude is required",
+				"valid_value": "latitude is invalid"
+			},
+			"longitude": {
+				"required": "longitude is required",
+				"valid_value": "longitude is invalid"
+			},
+			"store_category_type": {
+				"required": "store_category_type is required",
+				"invalid": "store_category_type is invalid"
+			}
+		},
+		"INVALID_PINCODE": "Invalid pincode",
+		"NOT_EXIST": "Store not exist",
+		"OUT_OF_SERVICE": "Store is out of service area",
+		"NOT_EXIST_REPAIR": "Store with repair category doesn't exist",
+		"EXIST_STORE_CONTACT": "store contact number already exist",
+		"NOT_EXIST_COURIER": "Store with courier category doesn't exist",
+		"NOT_EXIST_STORE_USER": "Store user not exist",
+		"ADD": {
+			"SUCCESS": "Store added successfully.",
+			"EXSISTS": "Store alerady added.",
+			"VALIDATIONS": {
+				"storeName": {
+					"required": "storeName is required.",
+					"mustString": "storeName must be string"
+				},
+				"storePic": {
+					"required": "storePic is required.",
+					"mustString": "storePic must be string"
+				},
+				"operationCityId": {
+					"required": "operationCityId is required.",
+					"mustString": "operationCityId must be string"
+				},
+				"storeAddress": {
+					"required": "storeAddress is required.",
+					"mustString": "storeAddress must be string"
+				},
+				"storePincode": {
+					"required": "storePincode is required.",
+					"mustString": "storePincode must be string"
+				},
+				"storeContact": {
+					"required": "storeContact is required.",
+					"mustString": "storeContact must be string"
+				},
+				"storeWorkingDays": {
+					"required": "storeWorkingDays is required.",
+					"mustArray": "storeWorkingDays must be array"
+				},
+				"storeStartTime": {
+					"required": "storeStartTime is required.",
+					"mustString": "storeStartTime must be string"
+				},
+				"storeEndTime": {
+					"required": "storeEndTime is required.",
+					"mustString": "storeEndTime must be string"
+				},
+				"userId": {
+					"required": "STORE.ADD.VALIDATIONS.userId.required"
+				}
+			}
+		},
+		"GET_ALL": {
+			"VALIDATIONS": {
+				"cityName": {
+					"required": "cityName is required"
+				},
+				"searchText": {
+					"required": "searchText is required"
+				}
+			},
+			"SUCCESS": "Store retrieved successfully."
+		},
+		"GET_DETAIL": {
+			"SUCCESS": "Store detail received successfully"
+		},
+		"UPDATE": {
+			"SUCCESS": "STORE.UPDATE.SUCCESS"
+		},
+		"REMOVE": {
+			"SUCCESS": "Store removed successfully"
+		},
+		"LOGIN": {
+			"SUCCESS": "Store logged in successfully"
+		},
+		"CATEGORY": {
+			"NOT_EXIST": "store category not exist",
+			"NOT_EXIST_REPAIR": "store repair category not exist",
+			"GET_ALL": {
+				"SUCCESS": "Category retrieved successfully."
+			}
+		},
+		"SUBCATEGORY": {
+			"GET_ALL": {
+				"SUCCESS": "Subcategory retrieved successfully."
+			}
+		},
+		"CHECK_AVAILABILITY": {
+			"SUCCESS": "Detail successfully received"
+		},
+		"BILLING": {
+			"NOT_EXIST": "billing detail not exist",
+			"GET_HISTORY": {
+				"SUCCESS": "billing history received successfully"
+			},
+			"GET_ORDER_DETAIL": {
+				"SUCCESS": "order detail received successfully"
+			}
+		}
+	},
+	"STOREUPIT": {
+		"ADD": {
+			"SUCCESS": "Upi added successfully.",
+			"VALIDATIONS": {
+				"storeMastId": {
+					"required": "storeMastId is required",
+					"mustString": "storeMastId must be string"
+				},
+				"storeUPICode": {
+					"required": "storeUPICode is required",
+					"mustString": "storeUPICode must be string"
+				}
+			}
+		}
+	},
+	"STOREUPI": {
+		"GET_ALL": {
+			"SUCCESS": "Upi retrieved successfully.",
+			"VALIDATIONS": {
+				"storeMastId": {
+					"required": "storeMastId is required",
+					"mustString": "storeMastId must be string"
+				}
+			}
+		}
+	},
+	"SUBSCRIBEORDER": {
+		"ADD": {
+			"SUCCESS": "Cart added successfully.",
+			"VALIDATIONS": {
+				"subscSubscribeId": {
+					"required": "subscSubscribeId is required",
+					"mustString": "subscSubscribeId must be string"
+				}
+			}
+		},
+		"GET_ALL": {
+			"SUCCESS": "Cart retrieved successfully."
+		}
+	},
+	"LOGIN": {
+		"SUCCESS": "LoggedIn successfully."
+	},
+	"PAYMENT": {
+		"GET_PAYMENT_ID": {
+			"SUCCESS": "Payment ID generated successfully.",
+			"VALIDATIONS": {
+				"amount": {
+					"mustNumber": "PAYMENT.GET_PAYMENT_ID.VALIDATIONS.amount.mustNumber"
+				},
+				"paymentType": {
+					"required": "PAYMENT.GET_PAYMENT_ID.VALIDATIONS.paymentType.required"
+				}
+			},
+			"VENDOR_NOT_FOUND_ERROR": "PAYMENT.GET_PAYMENT_ID.VENDOR_NOT_FOUND_ERROR"
+		},
+		"UPDATE_PAYMENT_LOG": {
+			"SUCCESS": "PAYMENT.UPDATE_PAYMENT_LOG.SUCCESS"
+		}
+	},
+	"USER_ADDRESS": {
+		"VALIDATIONS": {
+			"address": {
+				"required": "address is required",
+				"mustString": "address must be string"
+			},
+			"latitude": {
+				"required": "latitude is required",
+				"mustNumber": "latitude must be number"
+			},
+			"longitude": {
+				"required": "longitude is required",
+				"mustNumber": "longitude must be number"
+			},
+			"type": {
+				"required": "type is required",
+				"mustNumber": "type must be number"
+			},
+			"addressId": {
+				"required": "addressId is required",
+				"mustString": "addressId must be string"
+			}
+		},
+		"GET_ALL": {
+			"SUCCESS": "User addresses retrieved."
+		},
+		"ADD": {
+			"SUCCESS": "User address added successfully!!"
+		},
+		"UPDATE": {
+			"SUCCESS": "User address updated successfully.",
+			"NOT_FOUND": "User address not found."
+		},
+		"DELETE": {
+			"SUCCESS": "User address deleted successfully.",
+			"NOT_FOUND": "User address not found."
+		}
+	},
+	"SETTINGS": {
+		"GET_ALL": {
+			"SUCCESS": "Settings retrieved."
+		}
+	},
+	"FAQ": {
+		"VALIDATIONS": {
+			"title": {
+				"required": "title is required",
+				"mustString": "title must be string"
+			},
+			"description": {
+				"required": "description is required",
+				"mustString": "description must be string"
+			},
+			"faqId": {
+				"required": "faqId is required",
+				"mustNumber": "faqId must be number"
+			}
+		},
+		"GET_ALL": {
+			"SUCCESS": "FAQ retrieved."
+		},
+		"ADD": {
+			"SUCCESS": "FAQ added successfully!!"
+		},
+		"UPDATE": {
+			"SUCCESS": "FAQ updated successfully.",
+			"NOT_FOUND": "FAQ not found."
+		},
+		"DELETE": {
+			"SUCCESS": "FAQ deleted successfully.",
+			"NOT_FOUND": "FAQ not found."
+		}
+	},
+	"USER_RELATION": {
+		"VALIDATIONS": {
+			"followId": {
+				"required": "followId is required",
+				"mustString": "followId must be string"
+			}
+		},
+		"FOLLOW": {
+			"SUCCESS": "User followed!!"
+		},
+		"UNFOLLOW": {
+			"SUCCESS": "User unfollowed!!"
+		},
+		"GET_FOLLOWERS": {
+			"SUCCESS": "User followers retrieved!!"
+		},
+		"GET_FOLLOWINGS": {
+			"SUCCESS": "User followings retrieved!!"
+		}
+	},
+	"USER_CHAT": {
+		"VALIDATIONS": {
+			"userId": {
+				"required": "userId is required",
+				"mustString": "userId must be string"
+			},
+			"chatId": {
+				"required": "chatId is required",
+				"mustString": "chatId must be string"
+			}
+		},
+		"GET_ALL": {
+			"SUCCESS": "User chats retrieved."
+		},
+		"GET": {
+			"SUCCESS": "User chat retrieved.",
+			"NOT_FOUND": "User chat not found."
+		},
+		"UPDATE_COUNT": {
+			"SUCCESS": "User chat count updated."
+		}
+	},
+	"ADVERTISECONTENT": {
+		"ADD": {
+			"VALIDATIONS": {
+				"advertisementTypeCode": {
+					"required": "advertisementTypeCode is required",
+					"mustNumber": "advertisementTypeCode must be number."
+				},
+				"advertisementTypeId": {
+					"required": "advertisementTypeId is required",
+					"mustString": "advertisementTypeId must be string"
+				},
+				"advertiseImage": {
+					"required": "advertiseImage is required",
+					"mustString": "advertiseImage must be string"
+				},
+				"version": {
+					"required": "version is required",
+					"mustString": "version must be string"
+				},
+				"totalCount": {
+					"required": "totalCount is required",
+					"mustNumber": "totalCount must be string"
+				},
+				"endDate": {
+					"required": "endDate is required"
+				}
+			}
+		},
+		"GET_ALL": {
+			"SUCCESS": "Advertise retrieved successfully.",
+			"VALIDATIONS": {
+				"cityName": {
+					"required": "cityName is required."
+				}
+			}
+		}
+	},
+	"ADVERTISETYPE": {
+		"GET_ALL": {
+			"SUCCESS": "Type retrieved successfully."
+		},
+		"ADD": {
+			"VALIDATIONS": {
+				"typeCode": {
+					"required": "typeCode is required.",
+					"mustNumber": "typeCode must be number."
+				},
+				"typeName": {
+					"required": "typeName is required",
+					"mustString": "typeName must be string"
+				},
+				"isForOperationalCity": {
+					"required": "isForOperationalCity is required",
+					"mustBoolean": "isForOperationalCity must be boolean"
+				}
+			},
+			"SUCCESS": "Type added successfully."
+		}
+	},
+	"CUSTOMER_SERVICE": {
+		"VALIDATIONS": {
+			"requestId": {
+				"required": "requestId is required",
+				"mustNumber": "requestId must be number"
+			},
+			"rating": {
+				"required": "rating is required",
+				"mustNumber": "rating must be decimal number"
+			}
+		},
+		"GET": {
+			"SUCCESS": "Customer Service request retrieved!!",
+			"NOT_FOUND": "Customer Service not found."
+		},
+		"UPDATE": {
+			"SUCCESS": "Customer Service timestamp updated!!",
+			"NOT_FOUND": "Customer Service not found."
+		},
+		"RATE": {
+			"SUCCESS": "Customer service rated and closed!!"
+		}
+	},
+	"STOREITEM": {
+		"NOT_EXIST": "store item not exist",
+		"GET_ALL": {
+			"SUCCESS": "Store item retrieved successfully.",
+			"VALIDATIONS": {
+				"storeMasterId": {
+					"required": "storeMasterId is required"
+				},
+				"itemCatId": {
+					"required": "itemCatId is required"
+				},
+				"storeCatId": {
+					"required": "storeCatId is required"
+				},
+				"cityName": {
+					"required": "cityName is required"
+				},
+				"searchText": {
+					"required": "searchText is required"
+				}
+			}
+		},
+		"ADD": {
+			"SUCCESS": "Store item added successfully.",
+			"VALIDATIONS": {
+				"storeMasterId": {
+					"required": "storeMasterId is required.",
+					"mustString": "storeMasterId must be string."
+				},
+				"itemMasterId": {
+					"required": "itemMasterId is required",
+					"mustString": "itemMasterId must be string."
+				},
+				"itemQty": {
+					"required": "itemQty is required.",
+					"mustNumber": "itemQty must be number."
+				},
+				"itemOldPrice": {
+					"required": "itemOldPrice is required",
+					"mustDecimal": "itemOldPrice must be decimal"
+				},
+				"itemNewPrice": {
+					"required": "itemNewPrice is required",
+					"mustDecimal": "itemNewPrice must be decimal"
+				},
+				"totalQty": {
+					"required": "totalQty is required",
+					"mustNumber": "totalQty must be number."
+				},
+				"isAvailable": {
+					"required": "isAvailable is required",
+					"mustBoolean": "isAvailable must be boolean"
+				},
+				"isTopPick": {
+					"required": "isTopPick is required",
+					"mustBoolean": "isTopPick must be boolean"
+				}
+			}
+		},
+		"GET": {
+			"VALIDATIONS": {
+				"userId": {
+					"required": "STOREITEM.GET.VALIDATIONS.userId.required"
+				}
+			},
+			"SUCCESS": "Item detail received successfully"
+		}
+	},
+	"GOKEA": {
+		"ORDER_CALLBACK": {
+			"SUCCESS": "Order callback received."
+		},
+		"RIDER_CALLBACK": {
+			"SUCCESS": "Rider callback received."
+		},
+		"REVIEW_CALLBACK": {
+			"SUCCESS": "Review callback received."
+		}
+	},
+	"DUNZO": {
+		"ORDER_CALLBACK": {
+			"SUCCESS": "Order callback received."
+		}
+	},
+	"DELHIVERY": {
+		"ORDER_CALLBACK": {
+			"SUCCESS": "Order callback received."
+		}
+	},
+	"PACKAGECAT": {
+		"ADD": {
+			"SUCCESS": "Category added successfully.",
+			"VALIDATIONS": {
+				"catName": {
+					"required": "catName is required",
+					"mustString": "catName must be string"
+				},
+				"catPic": {
+					"required": "catPic is required",
+					"mustString": "catName must be string"
+				}
+			}
+		}
+	},
+	"PACKAGEORDER": {
+		"SLOT": {
+			"GET_LIST": {
+				"NOT_EXIST_CART_ITEM": "cart item not available",
+				"OUT_OF_SERVICE_RANGE": "location is out of service range",
+				"SUCCESS": "Slot list received successfully",
+				"VALIDATIONS": {
+					"cityName": {
+						"required": "city name is required"
+					}
+				}
+			}
+		},
+		"NOT_EXIST": "Order not exist",
+		"DELIVERED_ALREADY": "order already delivered",
+		"CANCELLED_ALREADY": "order cancelled delivered",
+		"NOT_EXIST_ORDER_ITEM": "Order item not available",
+		"ADD_CART": {
+			"SUCCESS": "Order added to cart"
+		},
+		"ADD": {
+			"SUCCESS": "Order added successfully.",
+			"EXPRESS_DELIVERY_UNAVAILABLE": "Express delivery isn't available",
+			"OUT_OF_SERVICE_RANGE": "location is out of service range",
+			"VALIDATIONS": {
+				"userId": {
+					"required": "userId is required",
+					"mustString": "userId must be string"
+				},
+				"orderRemarks": {
+					"required": "orderRemarks is required",
+					"mustString": "orderRemarks must be string"
+				},
+				"categoryId": {
+					"required": "categoryId is required",
+					"mustString": "categoryId must be string"
+				},
+				"pickupAddress": {
+					"required": "pickupAddress is required"
+				},
+				"dropAddress": {
+					"required": "dropAddress is required"
+				},
+				"totalDistance": {
+					"required": "totalDistance is required",
+					"mustDecimal": "totalDistance must be decimal"
+				},
+				"deliverPartnerFee": {
+					"required": "deliverPartnerFee is required",
+					"mustDecimal": "deliverPartnerFee must be decimal"
+				},
+				"otherCharges": {
+					"required": "otherCharges is required",
+					"mustDecimal": "otherCharges must be decimal"
+				},
+				"totalAmount": {
+					"required": "totalAmount is required",
+					"mustDecimal": "totalAmount must be decimal"
+				},
+				"isPaymentNeeded": {
+					"required": "isPaymentNeeded is required",
+					"mustBoolean": "isPaymentNeeded must be boolean"
+				},
+				"orderId": {
+					"required": "orderId is required"
+				},
+				"reason": {
+					"required": "reason is required"
+				},
+				"orderType": {
+					"required": "PACKAGEORDER.ADD.VALIDATIONS.orderType.required"
+				}
+			},
+			"NOT_FOUND_CITY": "City not found",
+			"MULTIPLE_STORE_ITEM": "multiple store item is available in cart",
+			"STORE_CLOSED": "Store Closed Now. Please schedule your order as per Store Time : %s am to yy %s"
+		},
+		"GET_ALL": {
+			"SUCCESS": "Order retrieved successfully.",
+			"VALIDATIONS": {
+				"userId": {
+					"required": "userId is required"
+				},
+				"orderId": {
+					"required": "orderId is required"
+				}
+			}
+		},
+		"UPDATE": {
+			"SUCCESS": "Order updated successfully."
+		},
+		"CANCEL": {
+			"SUCCESS": "order cancel success"
+		},
+		"GET_RIDER_AVAILABILITY": {
+			"SUCCESS": "Request proceed successfully"
+		},
+		"RETRY_FIND": {
+			"SUCCESS": "PACKAGEORDER.RETRY_FIND.SUCCESS",
+			"ORDER_NOT_FOUND": "PACKAGEORDER.RETRY_FIND.ORDER_NOT_FOUND"
+		},
+		"REPEAT": {
+			"ACTIVE_ORDER": "PACKAGEORDER.REPEAT.ACTIVE_ORDER"
+		},
+		"GET_DISTANCE": {
+			"SUCCESS": "Distance received successfully"
+		},
+		"DELIVER": {
+			"SUCCESS": "order delivered successfully"
+		},
+		"GET_SERVICEABILITY": {
+			"SUCCESS": "serviceability detail received successfully"
+		},
+		"GET_PACKAGE_SLIP": {
+			"SUCCESS": "package slip received successfully"
+		},
+		"OPEN": {
+			"VERIFY": {
+				"SUCCESS": "status updated successfully"
+			},
+			"UPDATE_PAYMENT": {
+				"SUCCESS": "payment detail updated successfully"
+			}
+		}
+	},
+	"CITYOPERATION": {
+		"NOT_EXIST": "'%s' city not exist",
+		"ADD": {
+			"SUCCESS": "city add successfully"
+		},
+		"GET_ALL": {
+			"SUCCESS": "city list"
+		}
+	},
+	"STORECART": {
+		"ADD": {
+			"SUCCESS": "Cart added successfully.",
+			"NOT_ALLOWED_MULTIPLE_STORE": "multiple store item not allowed",
+			"VALIDATIONS": {
+				"userId": {
+					"required": "userId is required",
+					"mustString": "userId must be string"
+				},
+				"cityName": {
+					"required": "cityName is required",
+					"mustString": "cityName must be string"
+				},
+				"storeItemMasterId": {
+					"required": "store Item Master Id is required",
+					"mustNumber": "store Item Master Id must be number."
+				}
+			},
+			"FAILED": "store cart failed",
+			"EXISTS": "store cart exist"
+		},
+		"GET_ALL": {
+			"SUCCESS": "Cart retrieved successfully.",
+			"VALIDATIONS": {
+				"userId": {
+					"required": "userId is required"
+				},
+				"cityName": {
+					"required": "cityName is required"
+				}
+			}
+		},
+		"UPDATE": {
+			"SUCCESS": "Cart updated successfully."
+		},
+		"DELETE": {
+			"SUCCESS": "Cart deleted successfully.",
+			"NOT_FOUND": "Cart not found"
+		},
+		"GET_STORE_AVAILABILITY": {
+			"SUCCESS": "Info received successfully"
+		}
+	},
+	"POST_SOCIETY": {
+		"ADD": {
+			"SUCCESS": "Post Society added successfully.",
+			"VALIDATIONS": {
+				"cityId": {
+					"required": "cityId is required",
+					"mustString": "cityId must be string"
+				}
+			}
+		},
+		"GET_ALL": {
+			"SUCCESS": "Post Societies retrieved."
+		},
+		"SEARCH": {
+			"VALIDATIONS": {
+				"searchText": {
+					"required": "searchText is required."
+				}
+			}
+		}
+	},
+	"SOCIETY": {
+		"ADD": {
+			"SUCCESS": "Society added successfully."
+		}
+	},
+	"RIDERRQ": {
+		"ADD": {
+			"SUCCESS": "Rider request added successfully."
+		}
+	},
+	"REWARD": {
+		"ADD": {
+			"VALIDATIONS": {
+				"startDate": {
+					"mustDate": "startDate must be date"
+				},
+				"endDate": {
+					"required": "endDate is required",
+					"mustDate": "endDate must be date"
+				},
+				"userid": {
+					"required": "userid is required"
+				},
+				"rewardType": {
+					"required": "rewardType is required"
+				},
+				"walletCashAmount": {
+					"required": "walletCashAmount is required"
+				},
+				"couponCode": {
+					"required": "couponCode is required"
+				},
+				"Revealed": {
+					"required": "Revealed is required"
+				},
+				"rewardTypeID": {
+					"required": "rewardTypeID is required"
+				},
+				"weeklyBudget": {
+					"required": "weeklyBudget is required"
+				},
+				"maxOnSingleReward": {
+					"required": "maxOnSingleReward is required"
+				},
+				"ratio": {
+					"required": "ratio is required"
+				},
+				"totalCount": {
+					"required": "totalCount is required"
+				},
+				"month": {
+					"required": "month is required"
+				},
+				"monthlyBudget": {
+					"required": "monthlyBudget is required"
+				},
+				"avilabelBudgetAmount": {
+					"required": "available BudgetAmount is required"
+				}
+			},
+			"SUCCESS": "Reward added successfully."
+		},
+		"GET_ALL": {
+			"SUCCESS": "Reward retrieved successfully."
+		},
+		"UPDATE": {
+			"SUCCESS": "Reward updated successfully.",
+			"VALIDATIONS": {
+				"rewardId": {
+					"required": "REWARD.UPDATE.VALIDATIONS.rewardId.required"
+				}
+			}
+		},
+		"GET": {
+			"VALIDATIONS": {
+				"userId": {
+					"required": "REWARD.GET.VALIDATIONS.userId.required"
+				},
+				"latitude": {
+					"required": "REWARD.GET.VALIDATIONS.latitude.required"
+				},
+				"longitude": {
+					"required": "REWARD.GET.VALIDATIONS.longitude.required"
+				}
+			}
+		}
+	},
+	"REVIEW": {
+		"Add": {
+			"SUCCESS": "Review added successfully."
+		},
+		"ADD": {
+			"VALIDATIONS": {
+				"total_price": {
+					"mustNumber": "REVIEW.ADD.VALIDATIONS.total_price.mustNumber"
+				}
+			}
+		}
+	},
+	"ADVERTISECARD": {
+		"GET_ALL": {
+			"VALIDATIONS": {
+				"cityName": {
+					"required": "city name is required"
+				}
+			}
+		},
+		"ADD": {
+			"SUCCESS": "Advertisement add successfully"
+		},
+		"UPDATE": {
+			"SUCCESS": "Advertisement update successfully"
+		},
+		"NOT_EXIST": "Advertisement card not exist",
+		"DELETE": {
+			"SUCCESS": "Advertisement delete successfully"
+		}
+	},
+	"WALLET_MODULE": {
+		"VALIDATIONS": {
+			"deductAmount": {
+				"required": "Deduct Amount is required",
+				"valid_value": "Deduct Amount must be valid value"
+			},
+			"orderId": {
+				"required": "orderId id required",
+				"valid_value": "orderId must be valid value"
+			}
+		},
+		"INSUFFICIENT_BALANCE": "Insufficient balance in your wallet",
+		"SUCCESS": "wallet detail"
+	},
+	"NORMALORDER": {
+		"ADD": {
+			"VALIDATIONS": {
+				"storeId": {
+					"required": "storeId is required"
+				}
+			}
+		}
+	},
+	"NOTIFICATION_INFO": {
+		"REVIEW_ITEM": {
+			"title": "Confirm items",
+			"body": "needs your confirmation for items to proceed"
+		},
+		"ORDER_ACCEPTED": {
+			"title": "Rider found for your Order",
+			"body": "Track your order here"
+		},
+		"RIDER_ARRIVED_CUSTOMER_LOCATION": {
+			"title": "Rider Arrived",
+			"body": "Rider Arrived at your location"
+		},
+		"NEW_ORDER": {
+			"title": "NOTIFICATION_INFO.NEW_ORDER.title",
+			"body": "NOTIFICATION_INFO.NEW_ORDER.body"
+		}
+	},
+	"PARTNER_NOTIFICATION_INFO": {
+		"NEW_ORDER": {
+			"title": "New order received",
+			"body": "Check order details here"
+		}
+	},
+	"ORDER_MODEL": {
+		"COST_DETAIL": "Order Delivery cost detail",
+		"VALIDATIONS": {
+			"city_name": {
+				"required": "ORDER_MODEL.VALIDATIONS.city_name.required"
+			}
+		}
+	},
+	"REPAIR_CATEGORY": {
+		"NOT_EXIST": "repair category not exist"
+	},
+	"STORE_CATEGORY": {
+		"NOT_FOUND": "Store category not exist",
+		"EXIST": "Store category already exist"
+	},
+	"ADD_STORE": {
+		"VALIDATIONS": {
+			"isStoreTopPick": {
+				"required": "ADD_STORE.VALIDATIONS.isStoreTopPick.required"
+			},
+			"storePincode": {
+				"required": "ADD_STORE.VALIDATIONS.storePincode.required"
+			},
+			"storeName": {
+				"required": "ADD_STORE.VALIDATIONS.storeName.required"
+			},
+			"storeCatId": {
+				"required": "ADD_STORE.VALIDATIONS.storeCatId.required"
+			},
+			"storeStartTime": {
+				"required": "ADD_STORE.VALIDATIONS.storeStartTime.required"
+			},
+			"storeEndTime": {
+				"required": "ADD_STORE.VALIDATIONS.storeEndTime.required"
+			},
+			"storeWorkingDays": {
+				"required": "ADD_STORE.VALIDATIONS.storeWorkingDays.required"
+			}
+		}
+	},
+	"SLOT_MASTER": {
+		"NOT_EXIST": "slot detail not exist",
+		"GET_ALL": {
+			"SUCCESS": "slot detail received successfully"
+		},
+		"UPDATE": {
+			"SUCCESS": "detail updated successfully"
+		}
+	},
+	"COUPON": {
+		"NOT_EXIST": "Coupon not exist",
+		"NOT_AVAILABLE": "Coupon is not available",
+		"NOT_CONSUMED": "Coupon is not consumed",
+		"ALREADY_CONSUMED": "Coupon is already consumed",
+		"REQUIRED_MIN_PURCHASE": "minimum cart value should be %s",
+		"NOT_AVAILABLE_FOR_USE": "Coupon is not available for use",
+		"APPLICABLE_ON_FIRST_ORDER_ONLY": "Coupon is applicable on first order only",
+		"COUPON_USED": "Coupon is already used",
+		"ITEM_NOT_AVAILABLE_IN_CART": "applicable for specific item only",
+		"NOT_APPLICABLE_USER": "applicable for specific user only",
+		"GET_LIST": {
+			"SUCCESS": "Coupon list received successfully"
+		},
+		"APPLY": {
+			"SUCCESS": "Coupon applied successfully"
+		},
+		"REMOVE_CONSUMED": {
+			"SUCCESS": "Coupon removed successfully"
+		}
+	},
+	"NOTIFICATION": {
+		"NOT_EXIST": "custom notification doesn't exist",
+		"SEND": {
+			"SUCCESS": "notification send successfully"
+		},
+		"REMOVE": {
+			"SUCCESS": "notification removed successfully"
+		},
+		"UPDATE": {
+			"SUCCESS": "notification updated successfully"
+		}
+	},
+	"STORE_AGENT": {
+		"UPDATE_SUCCESS": "Store agent update successfully"
+	},
+	"OUT_OF_SERVICE_RANGE": "out of service range",
+	"RAZOR_PAY": {
+		"CUSTOM": "%s"
+	}
+}
