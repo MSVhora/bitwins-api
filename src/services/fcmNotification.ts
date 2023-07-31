@@ -2,7 +2,7 @@ import { logger } from '../utils/logger';
 import firebaseAdmin from '../utils/firebaseConfig';
 
 class fcmNotification {
-   constructor() {}
+   constructor() { }
 
    public async sendNotification(data: any, registrationToken: any, options: any = {}) {
       logger.info(__filename, 'sendNotification', '', 'fcm send notification function call');

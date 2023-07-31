@@ -138,6 +138,10 @@
 				"cover": {
 					"required": "cover is required",
 					"mustString": "cover must be string"
+				},
+				"id": {
+					"required": "USER.ADD.VALIDATIONS.id.required",
+					"mustString": "USER.ADD.VALIDATIONS.id.mustString"
 				}
 			},
 			"CHANGE_CURRENT_ADDRESS": {
@@ -180,6 +184,15 @@
 			"GET_LIST": {
 				"SUCCESS": "user list received successfully"
 			}
+		},
+		"LOGIN": {
+			"SUCCESS": "USER.LOGIN.SUCCESS"
+		},
+		"DETAILS": {
+			"SUCCESS": "USER.DETAILS.SUCCESS"
+		},
+		"AIRDROP": {
+			"SUCCESS": "USER.AIRDROP.SUCCESS"
 		}
 	},
 	"VENDOR": {
@@ -1588,5 +1601,18 @@
 	"OUT_OF_SERVICE_RANGE": "out of service range",
 	"RAZOR_PAY": {
 		"CUSTOM": "%s"
+	},
+	"TIC_TAC_TOE_GAME": {
+		"INITIATE_GAME": {
+			"VALIDATIONS": {
+				"amount": {
+					"required": "TIC_TAC_TOE_GAME.INITIATE_GAME.VALIDATIONS.amount.required"
+				}
+			},
+			"SUCCESS": "TIC_TAC_TOE_GAME.INITIATE_GAME.SUCCESS"
+		},
+		"TRANSFER_WINNING_AMOUNT": {
+			"SUCCESS": "TIC_TAC_TOE_GAME.TRANSFER_WINNING_AMOUNT.SUCCESS"
+		}
 	}
 }

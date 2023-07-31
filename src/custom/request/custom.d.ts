@@ -1,9 +1,9 @@
 declare namespace Express {
    interface customArgs {
-      uuid: string;
+      uuid: string
    }
    export interface Request {
-      custom: customArgs;
-      user: any;
+      custom: customArgs
+      user: any
    }
 }

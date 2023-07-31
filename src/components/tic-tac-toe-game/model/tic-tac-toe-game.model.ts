@@ -1,8 +1,8 @@
 import { FindOptions, Transaction } from 'sequelize';
-import { TempType, TempQueryType } from '../types';
-import { TempSchema } from '../schema';
-class TempModel {
-   public buildQuery(object: TempQueryType): FindOptions {
+import { TicTacToeGameType, QueryType } from '../types';
+import { TicTacToeGameSchema } from '../schema';
+class TicTacToeGameModel {
+   public buildQuery(object: QueryType): FindOptions {
       let findQuery: FindOptions = {
          attributes: object.attributes,
          where: object.condition,
@@ -17,9 +17,9 @@ class TempModel {
     * @param insertObject
     * @param transaction
     */
-   async addOne(insertObject: TempType, transaction: Transaction | undefined = undefined): Promise<TempType> {
+   async addOne(insertObject: any, transaction: Transaction | undefined = undefined): Promise<TicTacToeGameType> {
       try {
-         const insertedObj: TempType = await TempSchema.create(insertObject, {
+         const insertedObj: TicTacToeGameType = await TicTacToeGameSchema.create(insertObject, {
             transaction: transaction ? transaction : undefined
          });
          return insertedObj;
@@ -34,9 +34,9 @@ class TempModel {
     * @param attributes
     * @param others
     */
-   async getMany(condition: any = {}, attributes: any, other: object = {}): Promise<TempType[]> {
+   async getMany(condition: any = {}, attributes: any, other: object = {}): Promise<TicTacToeGameType[]> {
       try {
-         return await TempSchema.findAll({
+         return await TicTacToeGameSchema.findAll({
             include: [],
             attributes: attributes !== undefined ? attributes : undefined,
             where: condition,
@@ -53,9 +53,9 @@ class TempModel {
     * @param attributes
     * @param others
     */
-   async getSingle(condition: any = {}, attributes: any[] = [], other: object = {}): Promise<TempType | null> {
+   async getSingle(condition: any = {}, attributes: any[] = [], other: object = {}): Promise<TicTacToeGameType | null> {
       try {
-         return await TempSchema.findOne({
+         return await TicTacToeGameSchema.findOne({
             attributes: attributes.length > 0 ? attributes : undefined,
             where: condition,
             raw: true,
@@ -72,11 +72,11 @@ class TempModel {
     * @param attributes
     * @param others
     */
-   async getSingleWithJoin(props: TempQueryType): Promise<TempType | null> {
+   async getSingleWithJoin(props: QueryType): Promise<TicTacToeGameType | null> {
       try {
          let findQuery: FindOptions = this.buildQuery(props);
 
-         return await TempSchema.findOne(findQuery);
+         return await TicTacToeGameSchema.findOne(findQuery);
       } catch (e) {
          throw e;
       }
@@ -90,7 +90,7 @@ class TempModel {
     */
    async update(obj: object, condition: any, transaction: Transaction | undefined = undefined) {
       try {
-         await TempSchema.update(obj, {
+         await TicTacToeGameSchema.update(obj, {
             where: condition,
             transaction: transaction ? transaction : undefined
          });
@@ -107,12 +107,12 @@ class TempModel {
     */
    async count(condition: any = {}, other: object = {}): Promise<any> {
       try {
-         return await TempSchema.count({ where: condition, ...other });
+         return await TicTacToeGameSchema.count({ where: condition, ...other });
       } catch (error) {
          throw error;
       }
    }
 }
 
-const tempModel = new TempModel();
-export default tempModel;
+const gameModel = new TicTacToeGameModel();
+export default gameModel;

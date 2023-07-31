@@ -1,3 +1,3 @@
-import fcmNotification from './fcmNotification';
+import fcmNotification from './fcmNotification'
 
-export { fcmNotification };
+export { fcmNotification }

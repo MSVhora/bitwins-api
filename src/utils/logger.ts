@@ -1,15 +1,16 @@
 import fs from 'fs';
 import moment from 'moment';
-import { Logger, transports } from 'winston';
+import { Logger, createLogger, transports, format } from 'winston';
+const { label: setLabel } = format
 
 class Logging {
-   public logger: any;
+   public logger: Logger;
 
    // define the logs level
    private logLevel: string = 'silly';
 
    constructor() {
-      this.logger = new Logger({
+      this.logger = createLogger({
          transports: this.transportList(),
          exceptionHandlers: this.transportList()
       });
@@ -46,18 +47,18 @@ class Logging {
    }
 
    public setFileLevel(level: string) {
-      this.logger.transports.file.level = level;
+      this.logger.transports[1].level = level;
    }
 
    public setConsoleLevel(level: string) {
-      this.logger.transports.console.level = level;
+      this.logger.transports[0].level = level;
    }
 
    public setLabel(fileName: string, method: string | null = null) {
       let label = this.getLabel(fileName);
       label += method ? ' ~ ' + method : '';
-      this.logger.transports.console['label'] = label;
-      this.logger.transports.file['label'] = label;
+      this.logger.transports[0].format = setLabel({ label: label })
+      this.logger.transports[1].format = setLabel({ label: label })
    }
 
    // return the file name from absolute path for label in logs

@@ -1,1 +1,1 @@
-export { default } from './firebaseAdmin';
+export { default } from './firebaseAdmin'

@@ -1,7 +1,7 @@
 import moment from 'moment';
 import { logger } from '../logger';
 
-export const dateSetStartOfDay = function(date: moment.Moment): moment.Moment {
+export const dateSetStartOfDay = function (date: moment.Moment): moment.Moment {
    try {
       return date.set({
          hour: 0,
@@ -16,6 +16,6 @@ export const dateSetStartOfDay = function(date: moment.Moment): moment.Moment {
 };
 
 /** Method for generate random date between two date */
-export const generateRandomDate = function({ start, end }: { start: Date; end: Date }): Date {
+export const generateRandomDate = function ({ start, end }: { start: Date; end: Date }): Date {
    return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
 };

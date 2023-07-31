@@ -9,7 +9,7 @@ middlewares(app); // bind middlewares
 
 routes(app); // initialize all routes
 // Base route to health check
-app.get('/test', (req: Request, res: Response) => {
+app.get('/test', (_req: Request, res: Response) => {
    return res.status(200).send('Test successful');
 });
 

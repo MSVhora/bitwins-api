@@ -7,7 +7,6 @@ config({ path: resolve(__dirname, '../.env') });
 import app from './app';
 import { logger } from './utils/logger';
 import sequelize from './utils/dbConfig';
-import migration from './scripts/202112231529-migrate-update-store-webpage';
 
 const server = createServer(app);
 const port: number = Number(process.env.PORT) || 3000;

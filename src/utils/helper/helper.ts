@@ -203,7 +203,7 @@ export const randomIntFromInterval = (min, max) => {
 export const getObjectKeys = (obj: object) => {
    try {
       return Object.keys(obj);
-   } catch (err) {
+   } catch (err: any) {
       logger.error(__filename, 'getObjectKeys', '', 'Error in getObjectKeys', JSON.stringify(err.stack));
       throw err;
    }
@@ -398,14 +398,14 @@ export const hasDuplicates = (arr, value: any = '') => {
    let seen = new Set();
    value = value.split('.');
 
-   return arr.some(function(v) {
+   return arr.some(function (v) {
       return (
          seen.size ===
          seen.add(
             value.length > 0
                ? value.reduce((acc, next) => {
-                    return next ? acc[next] : acc;
-                 }, v)
+                  return next ? acc[next] : acc;
+               }, v)
                : v
          ).size
       );

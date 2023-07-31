@@ -24,13 +24,13 @@ export default (app: Application) => {
       let chunks: any = [],
          body: any;
 
-      res.write = function(chunk) {
+      res.write = function (chunk) {
          chunks.push(chunk);
 
          return oldWrite.apply(res, arguments);
       };
 
-      res.end = function(chunk) {
+      res.end = function (chunk) {
          if (chunk) chunks.push(chunk);
 
          body = Buffer.concat(chunks).toString('utf8');
@@ -52,8 +52,7 @@ export default (app: Application) => {
             'logResponseBody',
             `${req.baseUrl}${req.path}`,
             req.method,
-            `${JSON.stringify(req.body)} - ${JSON.stringify(req.query)} - ${res.statusCode}${
-               res.statusCode != 200 ? ` -  ${body}` : ''
+            `${JSON.stringify(req.body)} - ${JSON.stringify(req.query)} - ${res.statusCode}${res.statusCode != 200 ? ` -  ${body}` : ''
             }`
          );
          // }
